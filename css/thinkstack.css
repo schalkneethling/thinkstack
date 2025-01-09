@@ -1,0 +1,16 @@
+body {
+  background: #fff url("../assets/pattern.svg") top left repeat;
+  background-size: 110%;
+  color: #333;
+  padding-block: 2rem;
+  padding-inline: 4rem;
+}
+
+.page-container {
+  margin: 0 auto;
+  max-inline-size: 80vw;
+}
+
+.page-heading {
+  margin-block-end: 2rem;
+}

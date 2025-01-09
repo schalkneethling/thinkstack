@@ -1,0 +1,9 @@
+.thinkstack-form {
+  display: flex;
+  gap: 1rem;
+}
+
+.thinkstack-form .form-field {
+  flex: 1;
+  margin-block-end: 0;
+}

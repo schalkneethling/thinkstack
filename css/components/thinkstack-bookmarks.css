@@ -1,0 +1,67 @@
+.no-bookmarks-wrapper,
+.bookmarks-list {
+  margin-block-start: 3rem;
+}
+
+.bookmarks-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.bookmark-entry {
+  background-color: #fff;
+  border: 1px solid #333;
+  border-radius: 0.5rem;
+  flex: 0 1 calc(80vw / 3);
+}
+
+.multiple .bookmark-entry {
+  flex: 1 1 calc(80vw / 4);
+}
+
+.bookmark-info {
+  padding-inline: 1rem;
+
+  h3 {
+    margin: 0;
+    word-break: break-word;
+  }
+}
+
+.bookmark-img-container {
+  aspect-ratio: 16 / 9;
+  padding: 1rem;
+}
+
+.bookmark-img {
+  border-radius: 0.5rem;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.no-bookmarks-wrapper {
+  background: transparent url("../../assets/arrow.svg") 65% center no-repeat;
+  background-size: 10rem;
+  block-size: 50vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.no-bookmarks-wrapper * {
+  margin: 0;
+}
+
+.no-bookmarks::before {
+  background: transparent url("../../assets/no-bookmarks.svg") center center
+    no-repeat;
+  background-size: contain;
+  block-size: 12.5rem;
+  content: "";
+  display: block;
+  inline-size: 12.5rem;
+  margin: 0 auto;
+}
