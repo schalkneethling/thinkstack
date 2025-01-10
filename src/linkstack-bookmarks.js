@@ -1,14 +1,9 @@
-export class ThinkStackBookmarks extends HTMLElement {
+export class LinkStackBookmarks extends HTMLElement {
   static #selectors = {
     bookmarksContainer: "#bookmarks-container",
     bookmarksEntryTmpl: "#bookmarks-entry-tmpl",
     noBookmakrsTmpl: "#no-bookmarks-tmpl",
   };
-
-  renderBookmarks() {
-    console.info("Rendering bookmarks...");
-    this.#renderBookmarks();
-  }
 
   constructor() {
     super();
@@ -22,7 +17,7 @@ export class ThinkStackBookmarks extends HTMLElement {
 
   #addEventListeners() {
     window.addEventListener("storage", (event) => {
-      if (event.key === "bookmarks:thinkstack") {
+      if (event.key === "bookmarks:linkstack") {
         this.#renderBookmarks();
       }
     });
@@ -30,12 +25,12 @@ export class ThinkStackBookmarks extends HTMLElement {
 
   #renderBookmarks() {
     const bookmarksContainer = this.querySelector(
-      ThinkStackBookmarks.#selectors.bookmarksContainer,
+      LinkStackBookmarks.#selectors.bookmarksContainer,
     );
     const entryTmpl = this.querySelector(
-      ThinkStackBookmarks.#selectors.bookmarksEntryTmpl,
+      LinkStackBookmarks.#selectors.bookmarksEntryTmpl,
     );
-    const localStorageKey = "bookmarks:thinkstack";
+    const localStorageKey = "bookmarks:linkstack";
 
     if (bookmarksContainer) {
       try {
@@ -43,7 +38,7 @@ export class ThinkStackBookmarks extends HTMLElement {
 
         if (!bookmarksInStorage) {
           const noBookmarksTmpl = this.querySelector(
-            ThinkStackBookmarks.#selectors.noBookmakrsTmpl,
+            LinkStackBookmarks.#selectors.noBookmakrsTmpl,
           );
           const noBookmarks = noBookmarksTmpl.content.cloneNode(true);
 
@@ -96,4 +91,4 @@ export class ThinkStackBookmarks extends HTMLElement {
   }
 }
 
-customElements.define("thinkstack-bookmarks", ThinkStackBookmarks);
+customElements.define("linkstack-bookmarks", LinkStackBookmarks);

@@ -4,29 +4,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ThinkStack</title>
+  <title>LinkStack</title>
   <link rel="stylesheet" type="text/css" href="css/minimalist/minimalist.css" media="screen">
-  <link rel="stylesheet" type="text/css" href="css/thinkstack.css" media="screen">
-  <link rel="stylesheet" type="text/css" href="css/components/thinkstack-form.css" media="screen">
-  <link rel="stylesheet" type="text/css" href="css/components/thinkstack-bookmarks.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="css/linkstack.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="css/components/linkstack-form.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="css/components/linkstack-bookmarks.css" media="screen">
 </head>
 
 <body>
   <div class="page-container">
-    <h1 class="heading-display page-heading">ThinkStack</h1>
-    <thinkstack-form>
-      <form class="thinkstack-form" id="bookmark-form" name="bookmark" action="/" method="post">
+    <h1 class="heading-display page-heading">LinkStack</h1>
+    <linkstack-form>
+      <form class="linkstack-form" id="bookmark-form" name="bookmark" action="/" method="post">
         <div class="form-field">
           <label class="visually-hidden" for="url">Enter bookmark URL</label>
           <input type="url" name="url" id="url" required>
         </div>
         <button class="button solid" type="submit">Add Bookmark</button>
       </form>
-    </thinkstack-form>
+    </linkstack-form>
 
-    <thinkstack-bookmarks>
-      <section aria-describedby="thinkstack-bookmarks-title" class="bookmarks-container" id="bookmarks-container">
-      </section>
+    <linkstack-bookmarks>
+      <section class="bookmarks-container" id="bookmarks-container"></section>
 
       <template id="no-bookmarks-tmpl">
         <div class="no-bookmarks-wrapper">
@@ -50,11 +49,11 @@
           </div>
         </li>
       </template>
-    </thinkstack-bookmarks>
+    </linkstack-bookmarks>
   </div>
 
-  <script type="module" src="src/thinkstack-form.js"></script>
-  <script type="module" src="src/thinkstack-bookmarks.js"></script>
+  <script type="module" src="src/linkstack-form.js"></script>
+  <script type="module" src="src/linkstack-bookmarks.js"></script>
 </body>
 
 </html>

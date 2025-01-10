@@ -1,4 +1,4 @@
-export class ThinkStackForm extends HTMLElement {
+export class LinkStackForm extends HTMLElement {
   static #selectors = {
     bookmarkForm: "#bookmark-form",
   };
@@ -10,7 +10,7 @@ export class ThinkStackForm extends HTMLElement {
   }
 
   #addItemToStorage(item) {
-    const localStorageKey = "bookmarks:thinkstack";
+    const localStorageKey = "bookmarks:linkstack";
     const storageChangedEvent = new StorageEvent("storage", {
       key: localStorageKey,
       newValue: JSON.stringify(item),
@@ -31,9 +31,9 @@ export class ThinkStackForm extends HTMLElement {
 
   #addEventListeners() {
     const bookmarkForm = this.querySelector(
-      ThinkStackForm.#selectors.bookmarkForm,
+      LinkStackForm.#selectors.bookmarkForm,
     );
-    const previewFallback = "../assets/thinkstack-fallback.webp";
+    const previewFallback = "../assets/linkstack-fallback.webp";
 
     if (bookmarkForm) {
       bookmarkForm.addEventListener("submit", async (event) => {
@@ -72,4 +72,4 @@ export class ThinkStackForm extends HTMLElement {
   }
 }
 
-customElements.define("thinkstack-form", ThinkStackForm);
+customElements.define("linkstack-form", LinkStackForm);
