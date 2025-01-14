@@ -12,7 +12,7 @@ export default async (request) => {
       const responseTxt = await response.text();
       const $ = cheerio.load(responseTxt);
 
-      const pageTitle = $("title").text();
+      const pageTitle = $("head > title").text();
       const metaDescription = $('meta[name="description"]').attr("content");
       const ogImage = $('meta[property="og:image"]').attr("content");
       const twitterImg = $('meta[name="twitter:image"]').attr("content");

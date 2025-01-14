@@ -21,7 +21,13 @@
   flex: 1 1 calc(80vw / 4);
 }
 
+.bookmark-entry button {
+  max-inline-size: unset;
+  width: 100%;
+}
+
 .bookmark-info {
+  padding-block-end: 1rem;
   padding-inline: 1rem;
 
   h3 {
