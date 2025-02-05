@@ -1,0 +1,18 @@
+.linkstack-dialog[open] {
+  display: grid;
+}
+
+.linkstack-dialog[open] .form-close-dialog {
+  justify-self: end;
+}
+
+.linkstack-dialog {
+  border-radius: var(--linkstack-dialog-border-radius);
+  box-shadow: var(--linkstack-dialog-box-shadow);
+  inline-size: 35vw;
+  padding: var(--size-16);
+}
+
+.linkstack-dialog::backdrop {
+  background: var(--linkstack-dialog-backdrop);
+}
