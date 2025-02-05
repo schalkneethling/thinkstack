@@ -21,9 +21,16 @@
   flex: 1 1 calc(80vw / 4);
 }
 
-.bookmark-entry button {
-  max-inline-size: unset;
-  width: 100%;
+.bookmark-actions {
+  display: flex;
+  gap: var(--size-8);
+  justify-content: space-between;
+  padding-block: var(--size-8);
+
+  button {
+    max-inline-size: unset;
+    width: 100%;
+  }
 }
 
 .bookmark-info {
@@ -32,7 +39,7 @@
 
   h3 {
     margin: 0;
-    word-break: break-word;
+    overflow-wrap: break-word;
   }
 }
 

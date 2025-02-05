@@ -1,3 +1,9 @@
+:root {
+  --linkstack-dialog-border-radius: 0.5rem;
+  --linkstack-dialog-box-shadow: 0 0 var(--size-16) rgba(0 0 0 / 30%);
+  --linkstack-dialog-backdrop: rgb(0 0 0 / 70%);
+}
+
 body {
   background: #fff url("../assets/pattern.svg") top left repeat;
   background-size: 110%;

@@ -48,6 +48,8 @@ export class LinkStackForm extends HTMLElement {
 
           if (response.ok) {
             const bookmark = await response.json();
+            bookmark.id = self.crypto.randomUUID();
+            bookmark.createdAt = new Date().toISOString();
             bookmark.url = formData.get("url");
 
             const img = new Image();
